@@ -1,0 +1,115 @@
+body {
+  height: 200vh;
+}
+.navbar {
+  background-color: white;
+  box-shadow: 0 0 10px blueviolet;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  height: max-content;
+  position: fixed;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.navbar .navLink {
+  cursor: pointer;
+  border: 1px solid rgb(202, 202, 202);
+  padding: 10px 15px;
+  margin: 15px 10px;
+  border-radius: 7px;
+  color: purple;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.2s;
+  letter-spacing: 1px;
+}
+.navbar .active {
+  background-color: rgb(196, 16, 196);
+  color: white;
+}
+.navbar .navLink::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: whitesmoke;
+  display: block;
+  transition: 0.5s;
+}
+.navbar .navLink:hover::after {
+  background-color: whitesmoke;
+  width: 100%;
+}
+.navbar .navLink:hover {
+  transform: scale(1.1);
+  background-color: rgb(196, 16, 196);
+  color: white;
+}
+.navbar .navLink span {
+  margin-left: 10px;
+}
+.right {
+  display: none;
+}
+/*  */
+/*  */
+@media only screen and (max-width: 999px) {
+  .navbar {
+    position: relative;
+    height: 100px;
+  }
+  .right {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
+    margin-left: -100%;
+    padding-top: 20px;
+    border: 1px solid rgb(161, 161, 161);
+    transition: 0.6s;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+  }
+  .navToggle {
+    margin-left: 0;
+  }
+  .navLink {
+    text-align: center;
+    width: 200px;
+  }
+  .menu {
+    border: 1px solid rgb(167, 167, 167);
+    width: 60px;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 25px;
+    color: purple;
+    border-radius: 5px;
+  }
+  .close {
+    border: 1px solid rgb(167, 167, 167);
+    width: 60px;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 25px;
+    color: rgb(209, 24, 24);
+    border-radius: 5px;
+  }
+}
